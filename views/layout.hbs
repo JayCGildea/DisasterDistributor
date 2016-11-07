@@ -3,8 +3,32 @@
   <head>
     <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $(".button-collapse").sideNav();
+            );
+        </script>
   </head>
   <body>
-    {{{body}}}
+    nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Logo</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">DisasterDistributor</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="Map">Sass</a></li>
+            <li><a href="Current Resources">Components</a></li>
+            <li><a href="Needed Resources">Javascript</a></li>
+            <li><a href="Help">Mobile</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="Map">Sass</a></li>
+            <li><a href="Current Resources">Components</a></li>
+            <li><a href="Needed Resources">Javascript</a></li>
+            <li><a href="Help">Mobile</a></li>
+          </ul>
+        </div>
+      </nav>
   </body>
 </html>
