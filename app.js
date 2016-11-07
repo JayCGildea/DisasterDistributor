@@ -33,13 +33,13 @@ app.get('/map', function(req, res){
   res.render('index');
 });
 
-app.get('/supply', function(req, res){
+app.get('/supplies', function(req, res){
   getData(function(supply){
     res.json(supply);
   });
 });
 
-app.get('/supply/:id', function(req, res){
+app.get('/supplies/:id', function(req, res){
     getData(function(supply){
         res.render('data', {supply: supply.byId[req.params.id], layout:null });
   });
