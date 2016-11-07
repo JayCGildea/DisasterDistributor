@@ -6,7 +6,7 @@ eqfeed_callback(
         "water": 200,
         "gas": 500,
         "shelter": 400,
-        "coordinates":[126.3832,5.9775,111.16]
+        "coordinates":[0,0,0]
     },
     {
         "id": 2,
@@ -15,6 +15,6 @@ eqfeed_callback(
         "water": 800,
         "gas": 600,
         "shelter": 900,
-        "coordinates":[-178.3725,-20.753,544.19]
+        "coordinates":[1,5,5]
     }
 );
