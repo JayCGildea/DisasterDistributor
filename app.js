@@ -29,6 +29,10 @@ app.get('/', function(req, res){
     res.render('index');
 });
 
+app.get('/map', function(req, res){
+  res.render('index');
+});
+
 app.get('/supply', function(req, res){
   getData(function(supply){
     res.json(supply);

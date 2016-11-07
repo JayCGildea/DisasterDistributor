@@ -4,29 +4,15 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=FALSE"></script>
 
 <script>
-    $( document ).ready(function() {
-
-        var mapOptions = {
-            center: new google.maps.LatLng(0.0, 0.0),
-            zoom: 10
-        };
-
-        var map = new google.maps.Map($('#map').get(0), mapOptions);
-
-        $.get('/supply', function(data){
-            if(!Array.isArray(data)) return console.error('/supply did not return array');
-            data.ForEach(function(supply){
-                var marker = new google.maps.Marker({
-                    position: supply.loc
-                    map: map,
-                    title: supply.name,
-                });
-                google.maps.event.addListener(marker, 'click', function(){
-                    $.get('/supply/' + supply.id, function(data) {
-                        $('#supplyinfo').html(data);
-                    }
-                }
-            }
-        }
-    );
+     function initMap() {
+       var uluru = {lat: -25.363, lng: 131.044};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 4,
+         center: uluru
+       });
+       var marker = new google.maps.Marker({
+         position: uluru,
+         map: map
+       });
+     }
 </script>
