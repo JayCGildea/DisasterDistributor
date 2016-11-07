@@ -17,7 +17,7 @@ eqfeed_callback(
     {
         "type": "Feature",
         "properties": {
-            id": 2,
+            "id": 2,
             "name": "Margate",
             "food": 700,
             "water": 800,
