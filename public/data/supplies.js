@@ -24,6 +24,6 @@ eqfeed_callback(
             "gas": 600,
             "shelter": 900,
         },
-        "geometry": {"type": "Point", "coordinates": [126.3832, 5.9775, 111.16]}
+        "geometry": {"type": "Point", "coordinates": [0, 0, 0]}
     }
     ]});
