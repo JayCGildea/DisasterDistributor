@@ -15,16 +15,16 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
            center: new google.maps.LatLng(2.8,-187.3),
            mapTypeId: 'terrain'
          });
-
+         var heatmapData = [];
          $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
              $.each(json1, function(key, data) {
                  var latLng = new google.maps.LatLng(data.lat, data.lng);
-                 // Creating a marker and putting it on the map
-                 var marker = new google.maps.Marker({
-                     position: latLng,
-                     title: data.name,
-                 });
-                 marker.setMap(map);
+                 heatmapData.push(latLng)
+             });
+             var heatmap = new google.maps.visualization.HeatmapLayer({
+               data: heatmapData,
+               dissipating: true,
+               map: map
              });
          });
        }
