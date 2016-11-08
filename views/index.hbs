@@ -20,19 +20,19 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
        // Loop through the results array and place a marker for each
        // set of coordinates.
 
-        //  $(document).ready(function(){
-        //    $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
-        //        $.each(json1, function(key, data) {
-        //            var latLng = new google.maps.LatLng(data.lat, data.lng);
-        //            // Creating a marker and putting it on the map
-        //            var marker = new google.maps.Marker({
-        //                position: latLng,
-        //                title: data.name;
-        //            });
-        //            marker.setMap(map);
-        //        });
-        //    });
-        // });
+          $(document).ready(function(){
+            $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
+                $.each(json1, function(key, data) {
+                    var latLng = new google.maps.LatLng(data.lat, data.lng);
+                    // Creating a marker and putting it on the map
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        title: data.name;
+                    });
+                    marker.setMap(map);
+                });
+            });
+         });
 
 
  </script>
