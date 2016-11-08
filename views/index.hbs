@@ -21,7 +21,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
                  var latLng = new google.maps.LatLng(data.lat, data.lng);
                  var weightedLoc = {
                     location: latLng,
-                    weight: (data.food+data.water+data.gas) / 1000,
+                    weight: (data.food+data.water+data.gas) / 10000,
                  };
                  heatmapData.push(weightedLoc);
              });
