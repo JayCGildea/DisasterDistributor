@@ -18,5 +18,15 @@
     "shelter": 900,
     "lat": 0,
     "lng": 0
+  },
+  {
+    "id": 3,
+    "name": "Erith",
+    "food": 700,
+    "water": 800,
+    "gas": 600,
+    "shelter": 900,
+    "lat": 2,
+    "lng": 2
   }
 ]
