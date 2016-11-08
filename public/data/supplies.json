@@ -1,5 +1,15 @@
 [
   {
+    "id": 0,
+    "name": "Blank",
+    "food": 0,
+    "water": 0,
+    "gas": 0,
+    "shelter": 0,
+    "lat": 0,
+    "lng": 0
+  },
+  {
     "id": 1,
     "name": "Canterbury",
     "food": 400,
