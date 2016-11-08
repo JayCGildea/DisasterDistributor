@@ -56,10 +56,10 @@ app.get('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req,
 
     var fs = require('fs');
     var obj;
-    fs.readFile('/data/supplies.js', 'utf8', function (err, data) {
+    fs.readFile('https://disasterdistributor.herokuapp.com/data/supplies.js', 'utf8', function (err, data) {
         if (err) throw err;
-        obj = JSON.parse(data);
-       document.write(obj);
+        obj = data;
+        document.write(obj);
     });
 });
 
