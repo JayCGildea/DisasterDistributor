@@ -45,7 +45,7 @@ app.get('/supplies/:id', function(req, res){
   });
 });
 
-app.put('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req, res) {
+app.get('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req, res) {
     var id = req.params.id;
     var name = req.params.name;
     var food = req.params.food;
