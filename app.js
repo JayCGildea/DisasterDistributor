@@ -59,7 +59,7 @@ app.get('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req,
     fs.readFile('/data/supplies.js', 'utf8', function (err, data) {
         if (err) throw err;
         obj = JSON.parse(data);
-        res.render('data', {supply: obj, layout:null });
+       document.write(obj);
     });
 });
 
