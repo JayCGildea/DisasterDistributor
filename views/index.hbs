@@ -1,4 +1,4 @@
-<div onload="heatMap()"> id="map">
+<div id="map">
 </div>
 
 <script
@@ -18,7 +18,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
 
          var script = document.createElement('script');
          // This example uses a local copy of the GeoJSON stored at
-         script.src = '/data/supplies.json';
+         script.src = 'https://disasterdistributor.herokuapp.com/data/supplies.json';
          document.getElementsByTagName('head')[0].appendChild(script);
        }
 
@@ -26,7 +26,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
        // set of coordinates.
 
           $(document).ready(function(){
-            $.getJSON("/data/supplies.json", function(json1) {
+            $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
                 $.each(json1, function(key, data) {
                     var latLng = new google.maps.LatLng(data.lat, data.lng);
                     // Creating a marker and putting it on the map
