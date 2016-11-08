@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Canterbury",
+    "food": 400,
+    "water": 200,
+    "gas": 500,
+    "shelter": 400,
+    "lat": 126.3832,
+    "lng": 5.9775
+  },
+  {
+    "id": 2,
+    "name": "Margate",
+    "food": 700,
+    "water": 800,
+    "gas": 600,
+    "shelter": 900,
+    "lat": 0,
+    "lng": 0
+  }
+]
