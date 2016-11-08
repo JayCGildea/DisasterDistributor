@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Canterbury",
+    "food": 400,
+    "water": 200,
+    "gas": 500,
+    "lat": 5.3832,
+    "lng": 120.9775
+  },
+  {
+    "id": 2,
+    "name": "Margate",
+    "food": 700,
+    "water": 800,
+    "gas": 600,
+    "lat": 0,
+    "lng": 0
+  },
+  {
+    "id": 3,
+    "name": "Erith",
+    "food": 700,
+    "water": 800,
+    "gas": 600,
+    "lat": 2,
+    "lng": 2
+  }
+]

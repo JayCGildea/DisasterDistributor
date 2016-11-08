@@ -16,7 +16,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
            mapTypeId: 'terrain'
          });
          var heatmapData = [];
-         $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
+         $.getJSON("/data/needSupplies.json", function(json1) {
              $.each(json1, function(key, data) {
                  var latLng = new google.maps.LatLng(data.lat, data.lng);
                  var weightedLoc = {
@@ -28,10 +28,23 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
              var heatmap = new google.maps.visualization.HeatmapLayer({
                data: heatmapData,
                dissipating: false,
-               radius: 5,
+               radius: 2,
                map: map
              });
          });
+
+          $.getJSON("/data/supplies.json", function(json1) {
+               $.each(json1, function(key, data) {
+                   var latLng = new google.maps.LatLng(data.lat, data.lng);
+                    // Creating a marker and putting it on the map
+                    var marker = new google.maps.Marker({
+                        position: latLng,
+                        title: data.name,
+                    });
+                    marker.setMap(map);
+                });
+           });
+
        }
 
        // Loop through the results array and place a marker for each
