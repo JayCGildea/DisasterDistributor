@@ -45,7 +45,7 @@ app.get('/supplies/:id', function(req, res){
   });
 });
 
-app.put('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req, res)) {
+app.put('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req, res) {
     var id = req.params.id;
     var name = req.params.name;
     var food = req.params.food;
@@ -61,7 +61,7 @@ app.put('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req,
         obj = JSON.parse(data);
         res.render('data', {supply: obj, layout:null });
     });
-}
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
