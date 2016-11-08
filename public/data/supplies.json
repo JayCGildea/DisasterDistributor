@@ -1,23 +1,12 @@
 [
   {
-    "id": 0,
-    "name": "Blank",
-    "food": 0,
-    "water": 0,
-    "gas": 0,
-    "shelter": 0,
-    "lat": 0,
-    "lng": 0
-  },
-  {
     "id": 1,
     "name": "Canterbury",
     "food": 400,
     "water": 200,
     "gas": 500,
-    "shelter": 400,
-    "lat": 126.3832,
-    "lng": 5.9775
+    "lat": 5.3832,
+    "lng": 120.9775
   },
   {
     "id": 2,
@@ -25,7 +14,6 @@
     "food": 700,
     "water": 800,
     "gas": 600,
-    "shelter": 900,
     "lat": 0,
     "lng": 0
   },
@@ -35,7 +23,6 @@
     "food": 700,
     "water": 800,
     "gas": 600,
-    "shelter": 900,
     "lat": 2,
     "lng": 2
   }

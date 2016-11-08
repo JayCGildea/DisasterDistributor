@@ -19,7 +19,11 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
          $.getJSON("https://disasterdistributor.herokuapp.com/data/supplies.json", function(json1) {
              $.each(json1, function(key, data) {
                  var latLng = new google.maps.LatLng(data.lat, data.lng);
-                 heatmapData.push(latLng)
+                 var weightedLoc = {
+                    location: latLng,
+                    weight: Math.pow(1.2, data.food*data.water*data.gas)
+                 };
+                 heatmapData.push(weightedLoc);
              });
              var heatmap = new google.maps.visualization.HeatmapLayer({
                data: heatmapData,
