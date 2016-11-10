@@ -34,7 +34,7 @@ function tweetEvent(eventMsg) {
             gas: values[3],
             lat: values[4],
             lng: values[5]
-        }
+    };
 
         jsonfile.writeFile(file, obj, function(err) {
             console.error(err);
