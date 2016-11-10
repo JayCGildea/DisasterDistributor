@@ -14,9 +14,11 @@ var stream = T.stream('user');
 //Anytime someone tweets at me
 stream.on('tweet', tweetEvent);
 
+console.log('twitterbot running!');
+
 function tweetEvent(eventMsg) {
 
-    console.log("Tweeted");
+    console.log('Tweeted at');
 
     var jsonfile = require('jsonfile');
     var replyto = eventMsg.in_reply_to_screen_name;
