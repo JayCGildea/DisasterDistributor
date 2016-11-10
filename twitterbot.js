@@ -22,7 +22,7 @@ function tweetEvent(eventMsg) {
 
     var jsonfile = require('jsonfile');
     var replyto = eventMsg.in_reply_to_screen_name;
-    var text = event.text;
+    var text = eventMsg.text;
 
     if(replyto === 'JayCGildea') {
         var values = text.split(",");
@@ -46,7 +46,7 @@ function tweetEvent(eventMsg) {
         });
 
         var tweet = {
-            status: '@' + eventMsg.user['screen_name'] + ' thanks for the info!'
+            status: '@' + eventMsg.user.screen_name + ' thanks for the info!'
         };
 
         T.post('statuses/update', tweet, tweeted);
