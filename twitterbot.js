@@ -44,8 +44,8 @@ function tweetEvent(eventMsg) {
         });
 
         var tweet = {
-            status: '@'.eventMsg.user['screen_name']." thanks for the info!";
-        }
+            status: '@' + eventMsg.user['screen_name'] + ' thanks for the info!'
+        };
 
         T.post('statuses/update', tweet, tweeted);
 
