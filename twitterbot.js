@@ -15,6 +15,9 @@ var stream = T.stream('user');
 stream.on('tweet', tweetEvent);
 
 function tweetEvent(eventMsg) {
+
+    console.log("Tweeted");
+
     var jsonfile = require('jsonfile');
     var replyto = eventMsg.in_reply_to_screen_name;
     var text = event.text;
@@ -34,10 +37,24 @@ function tweetEvent(eventMsg) {
             gas: values[3],
             lat: values[4],
             lng: values[5]
-    };
+        };
 
         jsonfile.writeFile(file, obj, function(err) {
             console.error(err);
         });
+
+        var tweet = {
+            status: '@'.eventMsg.user['screen_name']." thanks for the info!";
+        }
+
+        T.post('statuses/update', tweet, tweeted);
+
+        function tweeted(err, data, response) {
+            if(err) {
+                console.log("Something went wrong");
+            } else {
+                console.log("It worked!");
+            }
+        }
     }
 }
