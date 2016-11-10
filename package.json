@@ -13,6 +13,7 @@
     "hbs": "~4.0.1",
     "jsonfile": "^2.4.0",
     "morgan": "~1.7.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "twit": "^2.2.5"
   }
 }
