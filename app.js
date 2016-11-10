@@ -45,24 +45,6 @@ app.get('/supplies/:id', function(req, res){
   });
 });
 
-app.get('/supplies/add/:id/:name/:food/:water/:gas/:shelter/:geo', function(req, res) {
-    var id = req.params.id;
-    var name = req.params.name;
-    var food = req.params.food;
-    var water = req.params.water;
-    var gas = req.params.gas;
-    var shelter = req.params.shelter;
-    var geo = req.params.geo;
-
-    var fs = require('fs');
-    var obj;
-    fs.readFile('https://disasterdistributor.herokuapp.com/data/supplies.json', 'utf8', function (err, data) {
-        if (err) throw err;
-        obj = data;
-        document.write(obj);
-    });
-});
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
