@@ -7,21 +7,6 @@ var T = new Twit({
     access_token_secret:  'FrgtewCtbsA1fKu67yWzpfPXPsveCsQ4s60lVHscKL22w'
 });
 
-
-var tweet = {
-    status: 'Test'
-}
-
-T.post('statuses/update', tweet, tweeted);
-
-function tweeted(err, data, response) {
-    if(err) {
-        console.log(data);
-    } else {
-        console.log("Tweet posted");
-    }
-}
-
 //Set up a user stream
 var stream = T.stream('user');
 
@@ -45,7 +30,7 @@ function tweetEvent(eventMsg) {
             values[i] = values[i].split(values[i].search(":"), values[i].length - 1);
         }
 
-        var file = '/data/supplies.json';
+        var file = 'https://disasterdistributor.herokuapp.com/data/supplies.json';
         var obj = {
             name: values[0],
             food: values[1],
