@@ -8,6 +8,21 @@ var T = new Twit({
     timeout_ms:           60*1000,
 });
 
+
+var tweet = {
+    status: 'Test'
+}
+
+T.post('statuses/update', tweet, tweeted);
+
+function tweeted(err, data, response) {
+    if(err) {
+        console.log(data);
+    } else {
+        console.log("Tweet posted");
+    }
+}
+
 //Set up a user stream
 var stream = T.stream('user');
 
