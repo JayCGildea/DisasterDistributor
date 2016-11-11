@@ -1,4 +1,5 @@
 var Twit = require('twit');
+var request = require('request');
 
 var T = new Twit({
     consumer_key:         'HD8eGdSQDSiddZXtNOO0NbraE',
@@ -29,12 +30,10 @@ function tweetEvent(eventMsg) {
             values[i] = values[i].substr(values[i].indexOf(":") + 1);
         }
 
-        $.ajax({
-            type: 'POST',
-            url: 'https://disasterdistributor.herokuapp.com/supplies/add/' +
-        values[0] + '/' + values[1] + '/' + values[2] + '/' + values[3] +
-        '/' + values[4] + '/' + values[5]
-        });
+        request.post('https://disasterdistributor.herokuapp.com/supplies/add/' +
+            values[0] + '/' + values[1] + '/' + values[2] + '/' + values[3] +
+            '/' + values[4] + '/' + values[5]);
+
 
         //var tweet = {
         //    status: '@' + eventMsg.user.screen_name + ' thanks for the info!'
