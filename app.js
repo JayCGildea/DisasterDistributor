@@ -12,7 +12,27 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+
 app.set('view engine', 'hbs');
+
+app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
+    var jsonfile = require('jsonfile');
+
+    var file ='./public/data/supplies.json';
+
+    var obj = {
+        name: req.params.name,
+        food: req.params.food,
+        water: req.params.water,
+        gas: req.params.gas,
+        lat: req.params.lat,
+        lng: req.params.lng
+    };
+
+    jsonfile.writeFile(file, obj, function(err) {
+        console.error(err);
+    });
+});
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -37,25 +57,6 @@ app.get('/supplies', function(req, res){
   getData(function(supply){
     res.json(supply);
   });
-});
-
-app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
-    var jsonfile = require('jsonfile');
-
-    var file ='data/supplies.json';
-
-    var obj = {
-        name: req.params.name,
-        food: req.params.food,
-        water: req.params.water,
-        gas: req.params.gas,
-        lat: req.params.lat,
-        lng: req.params.lng
-    };
-
-    jsonfile.writeFile(file, obj, function(err) {
-        console.error(err);
-    });
 });
 
 // catch 404 and forward to error handler
