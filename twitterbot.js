@@ -30,7 +30,7 @@ function tweetEvent(eventMsg) {
             values[i] = values[i].split(values[i].search(":"), values[i].length - 1);
         }
 
-        var file = './public/data/supplies.json';
+        var file = '/data/supplies.json';
         var obj = {
             name: values[0],
             food: values[1],
