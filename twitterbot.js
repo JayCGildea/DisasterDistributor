@@ -30,7 +30,7 @@ function tweetEvent(eventMsg) {
             values[i] = values[i].split(values[i].search(":"), values[i].length - 1);
         }
 
-        var file = 'https://disasterdistributor.herokuapp.com/data/supplies.json';
+        var file = './public/data/supplies.json';
         var obj = {
             name: values[0],
             food: values[1],
@@ -44,18 +44,18 @@ function tweetEvent(eventMsg) {
             console.error(err);
         });
 
-        var tweet = {
-            status: '@' + eventMsg.user.screen_name + ' thanks for the info!'
-        };
+        //var tweet = {
+        //    status: '@' + eventMsg.user.screen_name + ' thanks for the info!'
+        //};
 
-        T.post('statuses/update', tweet, tweeted);
+        //T.post('statuses/update', tweet, tweeted);
 
-        function tweeted(err, data, response) {
-            if(err) {
-                console.log("Something went wrong");
-            } else {
-                console.log("It worked!");
-            }
-        }
+        //function tweeted(err, data, response) {
+        //    if(err) {
+        //        console.log("Something went wrong");
+        //    } else {
+        //        console.log("It worked!");
+        //    }
+        //}
     }
 }
