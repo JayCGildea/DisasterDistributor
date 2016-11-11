@@ -42,6 +42,8 @@ app.get('/supplies', function(req, res){
 app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
     var jsonfile = require('jsonfile');
 
+    var file ='data/supplies.json';
+
     var obj = {
         name: req.params.name,
         food: req.params.food,

@@ -1,4 +1,3 @@
-var path = require('path');
 var Twit = require('twit');
 var request = require('request');
 
@@ -30,9 +29,6 @@ function tweetEvent(eventMsg) {
         for(i=0; i < values.length; i++) {
             values[i] = values[i].substr(str.indexOf(":") + 1);
         }
-
-        var file = path.join(__dirname, 'data/supplies.json');
-
 
         request('https://disasterdistributor.herokuapp.com/supplies/add/' +
             values[0] + '/' + values[1] + '/' + values[2] + '/' + values[3] +
