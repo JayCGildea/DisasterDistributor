@@ -1,17 +1,12 @@
 var Twit = require('twit');
 
 var T = new Twit({
-    consumer_key:         'process.env.consumer_key',
-    consumer_secret:      'process.env.consumer_secret',
-    access_token:         'process.env.access_token',
-    access_token_secret:  'process.env.access_token_secret',
-    timeout_ms:           60*1000,
+    consumer_key:         'HD8eGdSQDSiddZXtNOO0NbraE',
+    consumer_secret:      'fzbcVcquhVDDasXf5JtanJT8C3jm7KKx0i7jzQxPFDP3nC1Mmh',
+    access_token:         '3407801057-49iMUcmObf4Li9P7aGf4G5aGbcTayYYPt42jAg1',
+    access_token_secret:  'FrgtewCtbsA1fKu67yWzpfPXPsveCsQ4s60lVHscKL22w'
 });
 
-console.log(process.env.consumer_key);
-console.log(process.env.consumer_secret);
-console.log(process.env.access_token);
-console.log(process.env.access_token_secret);
 
 var tweet = {
     status: 'Test'
