@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e19b9a1-f8d1-4704-9894-dcba184d5f35" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-    </list>
+    <list default="true" id="5e19b9a1-f8d1-4704-9894-dcba184d5f35" name="Default" comment="" />
     <ignored path="DisasterDistributor.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -702,12 +700,12 @@
       <updated>1478432617832</updated>
       <workItem from="1478432619621" duration="14082000" />
       <workItem from="1478598545646" duration="4585000" />
-      <workItem from="1478634338105" duration="20853000" />
+      <workItem from="1478634338105" duration="20984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39520000" />
+    <option name="totallyTimeSpent" value="39651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="842" y="0" width="1085" height="1047" extended-state="0" />
