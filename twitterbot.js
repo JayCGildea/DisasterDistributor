@@ -1,5 +1,6 @@
 var path = require('path');
 var Twit = require('twit');
+var request = require('request');
 
 var T = new Twit({
     consumer_key:         'HD8eGdSQDSiddZXtNOO0NbraE',
@@ -20,7 +21,6 @@ function tweetEvent(eventMsg) {
 
     console.log('Tweeted at');
 
-    var jsonfile = require('jsonfile');
     var replyto = eventMsg.in_reply_to_screen_name;
     var text = eventMsg.text;
 
@@ -32,18 +32,11 @@ function tweetEvent(eventMsg) {
         }
 
         var file = path.join(__dirname, 'data/supplies.json');
-        var obj = {
-            name: values[0],
-            food: values[1],
-            water: values[2],
-            gas: values[3],
-            lat: values[4],
-            lng: values[5]
-        };
 
-        jsonfile.writeFile(file, obj, function(err) {
-            console.error(err);
-        });
+
+        request('https://disasterdistributor.herokuapp.com//supplies/add/' +
+            values[0] + '/' + values[1] + '/' + values[2] + '/' + values[3] +
+                '/' + values[4] + '/' + values[5]);
 
         //var tweet = {
         //    status: '@' + eventMsg.user.screen_name + ' thanks for the info!'

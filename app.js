@@ -39,10 +39,21 @@ app.get('/supplies', function(req, res){
   });
 });
 
-app.get('/supplies/:id', function(req, res){
-    getData(function(supply){
-        res.render('data', {supply: supply.byId[req.params.id], layout:null });
-  });
+app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
+    var jsonfile = require('jsonfile');
+
+    var obj = {
+        name: req.params.name,
+        food: req.params.food,
+        water: req.params.water,
+        gas: req.params.gas,
+        lat: req.params.lat,
+        lng: req.params.lng
+    };
+
+    jsonfile.writeFile(file, obj, function(err) {
+        console.error(err);
+    });
 });
 
 // catch 404 and forward to error handler
