@@ -42,9 +42,9 @@ app.get('/supplies', function(req, res){
   });
 });
 
-app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
+app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
     var jsonfile = require('jsonfile');
-    console.write('reached');
+    console.log('reached');
 
     var obj = {
         name: req.params.name,
@@ -55,9 +55,9 @@ app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lng: req.params.lng
     };
     jsonfile.readfile(file, function(err, jsonobj) {
-        console.write(jsonobj);
+        console.log(jsonobj);
         jsonobj.push(obj);
-        console.write(jsonobj);
+        console.log(jsonobj);
         jsonfile.writeFile(file, jsonobj, function (err) {
             console.error(err);
         });
