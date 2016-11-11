@@ -54,14 +54,11 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lat: req.params.lat,
         lng: req.params.lng
     };
-    jsonfile.readfile(file, function(err, jsonobj) {
-        console.log(jsonobj);
-        jsonobj.push(obj);
-        console.log(jsonobj);
-        jsonfile.writeFile(file, jsonobj, function (err) {
-            console.error(err);
-        });
-    });
+    var jsonobj = jsonfile.readfileSync(file);
+    console.log(jsonobj);
+    jsonobj.push(obj);
+    console.log(jsonobj);
+    jsonfile.writeFileSync(file, jsonobj);
 });
 
 // catch 404 and forward to error handler
