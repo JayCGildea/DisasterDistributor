@@ -28,13 +28,13 @@ function tweetEvent(eventMsg) {
         var values = text.split(",");
 
         for(i=0; i < values.length; i++) {
-            values[i] = values[i].split(values[i].search(":"), values[i].length - 1);
+            values[i] = values[i].substr(str.indexOf(":") + 1);
         }
 
         var file = path.join(__dirname, 'data/supplies.json');
 
 
-        request('https://disasterdistributor.herokuapp.com//supplies/add/' +
+        request('https://disasterdistributor.herokuapp.com/supplies/add/' +
             values[0] + '/' + values[1] + '/' + values[2] + '/' + values[3] +
                 '/' + values[4] + '/' + values[5]);
 
