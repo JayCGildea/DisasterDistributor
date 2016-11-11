@@ -1,3 +1,4 @@
+var path = require('path');
 var Twit = require('twit');
 
 var T = new Twit({
@@ -30,7 +31,7 @@ function tweetEvent(eventMsg) {
             values[i] = values[i].split(values[i].search(":"), values[i].length - 1);
         }
 
-        var file = '/data/supplies.json';
+        var file = path.join(__dirname, 'data/supplies.json');
         var obj = {
             name: values[0],
             food: values[1],
