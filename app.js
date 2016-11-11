@@ -29,6 +29,7 @@ app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lng: req.params.lng
     };
     jsonfile.readfile(file, function(err, jsonobj) {
+        console.write(jsonobj);
         jsonobj.push(obj);
         jsonfile.writeFile(file, jsonobj, function (err) {
             console.error(err);
