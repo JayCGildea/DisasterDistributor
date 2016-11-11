@@ -28,9 +28,11 @@ app.get('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lat: req.params.lat,
         lng: req.params.lng
     };
-
-    jsonfile.writeFile(file, obj, function(err) {
-        console.error(err);
+    jsonfile.readfile(file, function(err, jsonobj) {
+        jsonobj.obj = obj;
+        jsonfile.writeFile(file, jsonobj, function (err) {
+            console.error(err);
+        });
     });
 });
 
