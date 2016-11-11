@@ -27,7 +27,7 @@ function tweetEvent(eventMsg) {
         var values = text.split(",");
 
         for(i=0; i < values.length; i++) {
-            values[i] = values[i].substr(str.indexOf(":") + 1);
+            values[i] = values[i].substr(values[i].indexOf(":") + 1);
         }
 
         request('https://disasterdistributor.herokuapp.com/supplies/add/' +
