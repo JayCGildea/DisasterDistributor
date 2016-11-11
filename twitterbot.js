@@ -8,6 +8,10 @@ var T = new Twit({
     timeout_ms:           60*1000,
 });
 
+console.log(process.env.consumer_key);
+console.log(process.env.consumer_secret);
+console.log(process.env.access_token);
+console.log(process.env.access_token_secret);
 
 var tweet = {
     status: 'Test'
