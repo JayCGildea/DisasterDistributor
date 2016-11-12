@@ -8,8 +8,6 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var file ='./public/data/supplies.json';
-
 var app = express();
 
 // view engine setup
@@ -43,7 +41,7 @@ app.get('/supplies', function(req, res){
 });
 
 app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
-    var jsonfile = require('jsonfile');
+    var fs = require('fs');
     console.log('reached');
 
     var obj = {
@@ -54,11 +52,18 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lat: req.params.lat,
         lng: req.params.lng
     };
-    var jsonobj = jsonfile.readfileSync(file);
-    console.log(jsonobj);
-    jsonobj.push(obj);
-    console.log(jsonobj);
-    jsonfile.writeFileSync(file, jsonobj);
+
+    var file ='./public/data/supplies.json';
+
+    fs.readfile(file, function (err, data) {
+        if(err) throw err;
+        var json = JSON.parse(data);
+        json.push(obj);
+        fs.writeFile(file, JSON.stringify(json), function(err){
+            if (err) throw err;
+            console.log('The data was appended to file!');
+        });
+    })
 });
 
 // catch 404 and forward to error handler
