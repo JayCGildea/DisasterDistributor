@@ -45,12 +45,12 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
     console.log('reached');
 
     var obj = {
-        name: req.params.name,
-        food: req.params.food,
-        water: req.params.water,
-        gas: req.params.gas,
-        lat: req.params.lat,
-        lng: req.params.lng
+        "name" : req.params.name,
+        "food": req.params.food,
+        "water": req.params.water,
+        "gas": req.params.gas,
+        "lat": req.params.lat,
+        "lng": req.params.lng
     };
 
     console.log(JSON.stringify(obj));
