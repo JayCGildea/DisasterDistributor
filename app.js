@@ -55,9 +55,8 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
 
     console.log(JSON.stringify(obj));
 
-    var file ='/data/supplies.json';
-
-    fs.readfile(file, function (err, data) {
+    fs.readfile('https://disasterdistributor.herokuapp.com/data/supplies.json', function (err, data) {
+        console.log('file read');
         if(err) throw err;
         var json = JSON.parse(data);
         json.push(obj);
