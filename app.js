@@ -55,7 +55,7 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
 
     console.log(JSON.stringify(obj));
 
-    fs.readFile('https://disasterdistributor.herokuapp.com/data/supplies.json', function (err, data) {
+    fs.readFile('./public/data/supplies.json', function (err, data) {
         console.log('file read');
         if(err) throw err;
         var json = JSON.parse(data);
@@ -64,7 +64,7 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
             if (err) throw err;
             console.log('The data was appended to file!');
         });
-    })
+    });
 });
 
 // catch 404 and forward to error handler
