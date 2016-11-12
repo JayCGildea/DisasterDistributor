@@ -53,7 +53,7 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         lng: req.params.lng
     };
 
-    var file ='./public/data/supplies.json';
+    var file ='/data/supplies.json';
 
     fs.readfile(file, function (err, data) {
         if(err) throw err;
