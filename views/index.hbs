@@ -31,7 +31,7 @@
 async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I9SY4Okk8&libraries=visualization&callback=initMap"></script>
 <script type="text/javascript">
-	<!-- Initialise the map -->
+	// Initialise the map
     var map;
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -41,7 +41,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
         });
 
 
-	<!-- Read data from JSON and place heatmaps -->
+	    // Read data from JSON and place heatmaps
 
         var heatmapData = [];
         $.getJSON("/data/needSupplies.json", function(json1) {
@@ -62,7 +62,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
         });
 
 
-	<!-- Read data from JSON and place markers -->
+	    // Read data from JSON and place markers
 
         $.getJSON("/data/supplies.json", function(json1) {
             $.each(json1, function(key, data) {
@@ -79,7 +79,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
                 }
 
 
-	<!-- On marker click update resource values -->
+	            // On marker click update resource values
 
                 google.maps.event.addListener(marker, 'click', function() {
                     document.getElementById("foodlist").innerHTML = marker.data.food;

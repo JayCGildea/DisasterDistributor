@@ -1,7 +1,10 @@
 <script>
     $(document).ready(function() {
+
+        // Create unordered list
         var list = $('<ul class="collapsible" data-collapsible="accordion"></ul>');
 
+        // Loop through Json and create list items, then place them in the list
         $.getJSON("/data/supplies.json", function(json1) {
             $.each(json1, function(key, data) {
                 list.append($("<li></li>").html('<div class="collapsible-header">' + data.name +
