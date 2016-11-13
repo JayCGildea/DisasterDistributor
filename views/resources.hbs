@@ -1,6 +1,6 @@
 <script>
     $(document).ready(function() {
-        var list = $(""<ul class="collapsible" data-collapsible="accordion"></ul>);
+        var list = $("<ul class="collapsible" data-collapsible="accordion"></ul>);
 
         $.getJSON("/data/supplies.json", function(json1) {
             $.each(json1, function(key, data) {
