@@ -25,6 +25,6 @@ a {
 }
 .wrapper li {
     float: left;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
