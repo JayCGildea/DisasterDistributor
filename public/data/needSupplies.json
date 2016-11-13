@@ -1,26 +1,62 @@
 [
   {
     "name": "Canterbury",
-    "food": 400,
-    "water": 200,
-    "gas": 500,
-    "lat": 5.3832,
-    "lng": 120.9775
+    "severity" : 4,
+    "lat": 51.280233,
+    "lng": 1.078909
   },
   {
     "name": "Margate",
-    "food": 700,
-    "water": 800,
-    "gas": 600,
-    "lat": 0,
-    "lng": 0
+    "severity" : 8,
+    "lat": 51.389646,
+    "lng": 1.386834
   },
   {
     "name": "Erith",
-    "food": 700,
-    "water": 800,
-    "gas": 600,
-    "lat": 2,
-    "lng": 2
+    "severity" : 3,
+    "lat": 51.480818,
+    "lng": 0.174675
+  },
+  {
+    "name": "London",
+    "severity" : 10,
+    "lat": 51.507351,
+    "lng": -0.127758
+  },
+  {
+    "name": "Greenwich",
+    "severity" : 3,
+    "lat": 51.483462,
+    "lng": 0
+  },
+  {
+    "name": "Whitstable",
+    "severity" : 3,
+    "lat": 51.361047,
+    "lng": 1.024256
+  },
+  {
+    "name": "Isle of Sheppy",
+    "severity" : 3,
+    "lat": 51.396490,
+    "lng": 0.836523
+  },
+  {
+    "name": "West Whickham",
+    "severity" : 3,
+    "lat": 51.375798,
+    "lng": 0.014861
+  },
+  {
+    "name": "Dover",
+    "severity" : 3,
+    "lat": 51.127876,
+    "lng": 1.313403
+  },
+  {
+    "name": "Ashford",
+    "severity" : 3,
+    "lat": 51.146466,
+    "lng": 0.875019
   }
 ]
