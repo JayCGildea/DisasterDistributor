@@ -1,29 +1,30 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 #map {
-  height:400px;
-  width: 100%;
+    height:400px;
+    width: 100%;
 }
 
 .wrapper {
-  text-align: center;
+    text-align: center;
 }
 .wrapper ul {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  /* For IE */
-  zoom:1;
-  *display: inline;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    /* For IE */
+    zoom:1;
+    *display: inline;
 }
 .wrapper li {
-  float: left;
-  padding: 2px 5px;
+    float: left;
+    padding-left: 10%;
+    padding-right: 10%;
 }
