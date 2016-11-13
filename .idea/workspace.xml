@@ -36,8 +36,8 @@
       <file leaf-file-name="resources.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/resources.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+            <state relative-caret-position="170">
+              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -789,12 +789,12 @@
       <workItem from="1478432619621" duration="14082000" />
       <workItem from="1478598545646" duration="4585000" />
       <workItem from="1478634338105" duration="25199000" />
-      <workItem from="1478951730256" duration="16430000" />
+      <workItem from="1478951730256" duration="16626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60296000" />
+    <option name="totallyTimeSpent" value="60492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="936" y="0" width="991" height="1047" extended-state="0" />
@@ -1204,8 +1204,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/resources.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="82" selection-start-line="2" selection-start-column="82" selection-end-line="2" selection-end-column="82" />
+        <state relative-caret-position="170">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
           <folding />
         </state>
       </provider>
