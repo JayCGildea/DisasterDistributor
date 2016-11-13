@@ -31,7 +31,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 2,
+            zoom: 6,
             center: new google.maps.LatLng(51.280233,1.078909),
             mapTypeId: 'terrain'
         });
@@ -48,7 +48,7 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
             });
             var heatmap = new google.maps.visualization.HeatmapLayer({
                 data: heatmapData,
-                dissipating: true,
+                dissipating: false,
                 radius: 2,
                 map: map
             });
