@@ -19,7 +19,7 @@ a {
   display: inline-block;
   margin: 0;
   padding: 0;
-  /* For IE, the outcast */
+  /* For IE */
   zoom:1;
   *display: inline;
 }
