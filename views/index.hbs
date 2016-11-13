@@ -5,6 +5,11 @@
       <li><i class="fa fa-tint fa-3x"></i></li>
       <li><i class="fa fa-fire fa-3x"></i></li>
     </ul>
+    <ul>
+      <li id="foodlist"></li>
+      <li id="waterlist"></li>
+      <li id="gaslist"></li>
+    </ul>
   </div>
 </nav>
 
@@ -51,21 +56,23 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
                     position: latLng,
                     title: data.name,
                 });
+                marker.data = {
+                    "name" : data.name,
+                    "food": data.food,
+                    "water": data.water,
+                    "gas": data.gas,
+                }
+                google.maps.event.addListener(marker, 'click', markerClicked);
                 marker.setMap(map);
             });
         });
 
-        google.maps.event.addListener(map, 'click', function(event) {
-            placeMarker(event.latLng);
-        });
-
-        function placeMarker(location) {
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-            map.setCenter(location);
+        function markerClicked(e) {
+            document.getElementById("foodlist").innerHTML = data.food;
+            document.getElementById("waterlist").innerHTML = data.water;
+            document.getElementById("gaslist").innerHTML = data.gas;
         }
+
 
     }
 
