@@ -9,7 +9,7 @@
         $.getJSON("/data/supplies.json", function(json1) {
             $.each(json1, function(key, data) {
                 var li = (document.createElement('li'));
-                li.text(<div class="collapsible-header">' + data.name +
+                li.text(''<div class="collapsible-header">' + data.name +
                     '</div><div class="collapsible-body"><p>' +
                     'Food: ' + data.food + '<br>Water: ' + data.water +
                     '<br>Gas: ' + data.gas + '<br>Lat: ' + data.lat +
