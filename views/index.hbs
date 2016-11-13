@@ -68,9 +68,9 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
         });
 
         function markerClicked(e) {
-            document.getElementById("foodlist").innerHTML = data.food;
-            document.getElementById("waterlist").innerHTML = data.water;
-            document.getElementById("gaslist").innerHTML = data.gas;
+            document.getElementById("foodlist").innerHTML = marker.food;
+            document.getElementById("waterlist").innerHTML = marker.water;
+            document.getElementById("gaslist").innerHTML = marker.gas;
         }
 
 
