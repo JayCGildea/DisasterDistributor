@@ -34,10 +34,8 @@ app.get('/map', function(req, res){
   res.render('index');
 });
 
-app.get('/supplies', function(req, res){
-  getData(function(supply){
-    res.json(supply);
-  });
+app.get('/CurrentResources', function(req, res){
+  res.render('resources');
 });
 
 app.post('/supplies/request/:name/:severity/:lat/:lng', function(req, res){

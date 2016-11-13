@@ -1,25 +1,25 @@
 [
   {
     "name": "Canterbury",
-    "food": 400,
-    "water": 200,
-    "gas": 500,
+    "food": 421,
+    "water": 263,
+    "gas": 572,
     "lat": 51.280399,
     "lng": 1.078900
   },
   {
     "name": "Margate",
-    "food": 700,
-    "water": 800,
-    "gas": 600,
+    "food": 753,
+    "water": 812,
+    "gas": 661,
     "lat": 51.389,
     "lng": 1.386899
   },
   {
     "name": "Erith",
-    "food": 700,
-    "water": 800,
-    "gas": 600,
+    "food": 761,
+    "water": 812,
+    "gas": 691,
     "lat": 51.480820,
     "lng": 0.174600
   }
