@@ -19,12 +19,12 @@ a {
     display: inline-block;
     margin: 0;
     padding: 0;
+    width: 90%;
     /* For IE */
     zoom:1;
     *display: inline;
 }
 .wrapper li {
     float: left;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 20%;
 }
