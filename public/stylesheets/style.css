@@ -21,6 +21,7 @@ a {
     list-style: none;
 }
 .wrapper li {
-    display: table-cell;
-    text-align: center;
+    float: left;
+    width:25%;
+    text-align:center;
 }
