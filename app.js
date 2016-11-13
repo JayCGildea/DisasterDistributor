@@ -40,6 +40,33 @@ app.get('/supplies', function(req, res){
   });
 });
 
+app.post('/supplies/request/:name/:severity/:lat/:lng', function(req, res){
+    var fs = require('fs');
+    console.log('reached');
+
+    var obj = {
+        "name" : req.params.name,
+        "severity": req.params.severity,
+        "lat": req.params.lat,
+        "lng": req.params.lng
+    };
+
+    console.log(JSON.stringify(obj));
+
+    var file = './public/data/needSupplies.json';
+
+    fs.readFile(file, function (err, data) {
+        console.log('file read');
+        if(err) throw err;
+        var json = JSON.parse(data);
+        json.push(obj);
+        fs.writeFile(file, JSON.stringify(json), function(err){
+            if (err) throw err;
+            console.log('The data was appended to needSupplies!');
+        });
+    });
+});
+
 app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
     var fs = require('fs');
     console.log('reached');
@@ -64,7 +91,7 @@ app.post('/supplies/add/:name/:food/:water/:gas/:lat/:lng', function(req, res){
         json.push(obj);
         fs.writeFile(file, JSON.stringify(json), function(err){
             if (err) throw err;
-            console.log('The data was appended to file!');
+            console.log('The data was appended to supplies!');
         });
     });
 });

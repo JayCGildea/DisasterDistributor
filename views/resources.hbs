@@ -1,0 +1,32 @@
+<ul class="collapsible" data-collapsible="accordion">
+  <li>
+    <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+  <li>
+    <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+  <li>
+    <div class="collapsible-header"></div>
+    <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+  </li>
+</ul>
+
+<script>
+    var ul = $('<ul>').appendTo('body');
+    $.getJSON("/data/supplies.json", function(json1) {
+        $.each(json1, function(key, data) {
+            var li = (document.createElement('li');
+            li.text = '<div class="collapsible-header">' + data.name
+            + '</div><div class="collapsible-body"><p>' +
+            'Food: ' + data.food + '<br>Water: ' + data.water +
+            '<br>Gas: ' + data.gas + '<br>Lat: ' + data.lat +
+            '<br>Lng: ' + data.lng + '</p></div>';
+            ul.append(li);
+        });
+    });
+    $(document).ready(function(){
+      $('.collapsible').collapsible();
+    });
+</script>
