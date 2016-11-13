@@ -42,14 +42,14 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
                 var latLng = new google.maps.LatLng(data.lat, data.lng);
                 var weightedLoc = {
                     location: latLng,
-                    weight: data.severity,
+                    weight: data.severity*1.5,
                 };
                 heatmapData.push(weightedLoc);
             });
             var heatmap = new google.maps.visualization.HeatmapLayer({
                 data: heatmapData,
                 dissipating: false,
-                radius: 2,
+                radius: 1,
                 map: map
             });
         });
