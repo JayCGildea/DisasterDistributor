@@ -62,12 +62,16 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_uc84ANbe0t8Y1Hxc7lDtu8I
                     "water": data.water,
                     "gas": data.gas,
                 }
-                google.maps.event.addListener(marker, 'click', markerClicked);
+                google.maps.event.addListener(marker, 'click', function() {
+                    document.getElementById("foodlist").innerHTML = marker.data.food;
+                    document.getElementById("waterlist").innerHTML = marker.data.water;
+                    document.getElementById("gaslist").innerHTML = marker.data.gas;
+                });
                 marker.setMap(map);
             });
         });
 
-        function markerClicked(e) {
+        function () {
             document.getElementById("foodlist").innerHTML = marker.food;
             document.getElementById("waterlist").innerHTML = marker.water;
             document.getElementById("gaslist").innerHTML = marker.gas;
